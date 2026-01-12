@@ -95,19 +95,117 @@
     </div>
     <button onclick="copyReview(this)">Copy Review</button>
 </div>
-
+<main id="reviews"></main>
 <footer>
     © 2026 Pappu Electricals, Ghatampur Kanpur
 </footer>
 
 <script>
-function copyReview(button) {
-    const text = button.previousElementSibling.innerText;
-    navigator.clipboard.writeText(text).then(() => {
-        window.location.href = "https://www.google.com/search?si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOZWOYD7M86pKCHf37bqnJ3m75qFH1l_r4AwoeDzbcE6hQP5NJha1ih8AjQikrvg2ahp_Fpzb1RKpLL5K5IhzIA04F7VwdVV04Qw5Iwctdx4DhLgQAg%3D%3D&q=Pappu+Electricals+Reviews&cshid=1768234906843849&aic=0";
-    });
-}
-</script>
+const GOOGLE_REVIEW_URL =
+"https://www.google.com/search?q=pappu+electricals+ghatampur+reviews&sourceid=chrome-mobile&ie=UTF-8#lkt=LocalPoiReviews";
 
+// Opening lines
+const OPENINGS = [
+  "पप्पू इलेक्ट्रिकल्स से बहुत अच्छी सर्विस मिली।",
+  "मेरा अनुभव Pappu Electricals के साथ काफी अच्छा रहा।",
+  "Ghatampur में Pappu Electricals एक भरोसेमंद नाम है।",
+  "Pappu Electricals से कराया गया काम संतोषजनक रहा।",
+  "मुझे Pappu Electricals की सर्विस पसंद आई।",
+  "घाटमपुर में यह एक अच्छी electrical shop है।",
+  "पहली बार Pappu Electricals से काम कराया और अच्छा लगा।",
+  "काफी समय से Pappu Electricals से काम करवा रहा हूँ।"
+];
+
+// Services / appliances
+const SERVICES = [
+  "घर की वायरिंग और स्विच बोर्ड का काम",
+  "फैन और कूलर की वायरिंग",
+  "cooler wiring aur fan repair",
+  "mixer aur iron ka electrical issue",
+  "house wiring aur cables ka kaam",
+  "shop lighting aur wiring",
+  "switches aur sockets replacement",
+  "extension board aur plug ka repair",
+  "fan installation aur wiring check",
+  "cooler aur motor ka connection"
+];
+
+// Quality
+const QUALITY = [
+  "सही तरीके से किया गया।",
+  "एक ही visit में solve हो गया।",
+  "काम साफ और सुरक्षित था।",
+  "कोई problem नहीं आई।",
+  "काम जल्दी पूरा हो गया।",
+  "electrician experienced लगा।",
+  "काम durable और strong लगा।",
+  "proper tools और अच्छे सामान का इस्तेमाल हुआ।",
+  "पूरा काम explain करके किया।"
+];
+
+// Trust / location
+const TRUST = [
+  "घाटमपुर में भरोसेमंद electrician है।",
+  "Kanpur rural area के लिए अच्छी service है।",
+  "future में भी यहीं से काम करवाऊँगा।",
+  "electrical repair के लिए recommended है।",
+  "local area के हिसाब से best option है।",
+  "घर और shop दोनों के लिए सही है।",
+  "rates भी reasonable लगे।"
+];
+
+// Generate review pool (200+)
+function generateReviewPool() {
+  const pool = [];
+  for (let o of OPENINGS) {
+    for (let s of SERVICES) {
+      for (let q of QUALITY) {
+        for (let t of TRUST) {
+          pool.push(`${o} ${s} ${q} ${t}`);
+          if (pool.length >= 220) return pool;
+        }
+      }
+    }
+  }
+  return pool;
+}
+
+const ALL_REVIEWS = generateReviewPool();
+
+// Shuffle helper
+function shuffle(arr) {
+  return arr.sort(() => Math.random() - 0.5);
+}
+
+// Load random reviews on page load
+function loadReviews() {
+  const container = document.getElementById("reviews");
+  container.innerHTML = "";
+
+  const selected = shuffle([...ALL_REVIEWS]).slice(0, 5);
+
+  selected.forEach(text => {
+    const box = document.createElement("div");
+    box.className = "review-box";
+
+    box.innerHTML = `
+      <div class="review-text">${text}</div>
+      <button>Copy Review</button>
+    `;
+
+    box.querySelector("button").onclick = () => {
+      navigator.clipboard.writeText(text).then(() => {
+        window.location.href = GOOGLE_REVIEW_URL;
+      });
+    };
+
+    container.appendChild(box);
+  });
+}
+
+// Run
+loadReviews();
+</script>
 </body>
+
 </html>
