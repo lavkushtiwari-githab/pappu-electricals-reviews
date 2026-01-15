@@ -1,93 +1,85 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>Pappu Electricals Ghatampur – Google Reviews</title>
-<meta name="description" content="Pappu Electricals Ghatampur Kanpur ke liye ready Hindi aur Hinglish Google reviews. Copy kare aur direct Google reviews page par paste kare.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-:root {
-    --primary: #0b57d0;
-    --bg: #f1f3f6;
-    --card: #ffffff;
-    --text: #222;
-    --muted: #666;
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
+  background:#f2f4f7;
+}
+header{
+  background:#fff;
+  padding:16px;
+  text-align:center;
+  box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+header h1{margin:0;font-size:20px}
+header p{margin:6px 0 0;color:#666;font-size:14px}
+
+main{
+  max-width:900px;
+  margin:auto;
+  padding:16px;
 }
 
-* {
-    box-sizing: border-box;
+.categories{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:12px;
+  margin-top:20px;
 }
 
-body {
-    margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    background: var(--bg);
-    color: var(--text);
+.cat-btn{
+  background:#0b57d0;
+  color:#fff;
+  border:none;
+  padding:16px;
+  border-radius:12px;
+  font-size:15px;
+  cursor:pointer;
+}
+.cat-btn:active{transform:scale(.97)}
+
+.review{
+  background:#fff;
+  border-radius:12px;
+  padding:16px;
+  margin-bottom:14px;
+  box-shadow:0 4px 14px rgba(0,0,0,.08);
+}
+.review p{
+  margin:0;
+  font-size:15px;
+  line-height:1.6;
+}
+.review button{
+  margin-top:12px;
+  background:#0b57d0;
+  color:#fff;
+  border:none;
+  padding:10px 16px;
+  border-radius:8px;
+  cursor:pointer;
 }
 
-header {
-    background: var(--card);
-    padding: 18px 16px;
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    position: sticky;
-    top: 0;
-    z-index: 10;
+.back{
+  margin-bottom:16px;
+  background:#ddd;
+  border:none;
+  padding:8px 12px;
+  border-radius:6px;
+  cursor:pointer;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 20px;
-}
-
-header p {
-    margin: 6px 0 0;
-    font-size: 14px;
-    color: var(--muted);
-}
-
-main {
-    padding: 16px;
-    max-width: 800px;
-    margin: auto;
-}
-
-.review-box {
-    background: var(--card);
-    border-radius: 12px;
-    padding: 16px;
-    margin-bottom: 14px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-}
-
-.review-text {
-    font-size: 15px;
-    line-height: 1.65;
-}
-
-button {
-    margin-top: 12px;
-    background: var(--primary);
-    color: #fff;
-    border: none;
-    padding: 10px 16px;
-    border-radius: 8px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: transform 0.1s ease, background 0.2s ease;
-}
-
-button:active {
-    transform: scale(0.97);
-    background: #0845a3;
-}
-
-footer {
-    text-align: center;
-    padding: 20px 10px;
-    font-size: 13px;
-    color: var(--muted);
+footer{
+  text-align:center;
+  padding:20px;
+  font-size:13px;
+  color:#666;
 }
 </style>
 </head>
@@ -95,65 +87,305 @@ footer {
 <body>
 
 <header>
-    <h1>Pappu Electricals – Review Copy Page</h1>
-    <p>Review copy kare → Google Reviews page khul jayega</p>
+  <h1>Pappu Electricals – Review Copy Page</h1>
+  <p>Pehle category select kare, phir review copy kare</p>
 </header>
 
-<main id="reviews"></main>
+<main id="app"></main>
 
-<footer>
-    © 2026 Pappu Electricals, Ghatampur Kanpur
-</footer>
+<footer>© 2026 Pappu Electricals, Ghatampur Kanpur</footer>
 
 <script>
-const GOOGLE_REVIEW_URL = "https://www.google.com/search?sca_esv=72ed8926a77c5d66&sxsrf=ANbL-n736QQ9mFlEkLNkDmlrdKRQ4UzztA:1768284547007&q=pappu+electricals+ghatampur+reviews&nirf=pappu+electronics+ghatampur+reviews&sa=X&ved=2ahUKEwjZ4aSi7YeSAxUiRmwGHaeMCdoQ8BYoAXoECA0QAg&biw=376&bih=714&dpr=3.25&aic=0#ebo=1";
+const GOOGLE_URL =
+"https://www.google.com/search?sxsrf=ANbL-n4qTUjJCLqz7g-0_5AMABWqIagupw:1768488830220&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOZWOYD7M86pKCHf37bqnJ3m75qFH1l_r4AwoeDzbcE6hQP5NJha1ih8AjQikrvg2ahp_Fpzb1RKpLL5K5IhzIA04F7VwdVV04Qw5Iwctdx4DhLgQAg%3D%3D&q=Pappu+Electricals+Reviews&aic=0#lrd=0x399c55ff57f5674d:0x283b50e014162864,3,,,,";
 
-const ALL_REVIEWS = [
-    "पप्पू इलेक्ट्रिकल्स, घाटमपुर से बहुत अच्छी सर्विस मिली। घर की वायरिंग और स्विच बोर्ड का काम सही तरीके से किया गया। फैन और कूलर की वायर भी ठीक कर दी।",
-    "Maine Pappu Electricals se mixer aur iron ka issue fix karwaya। kaam jaldi ho gaya aur charges bhi reasonable the।",
-    "Ghar ke wiring cables aur switches ka kaam Pappu Electricals ne kiya। kaam safe aur proper tha। reliable electrical shop hai।",
-    "Cooler aur fan ka problem ek hi visit me solve ho gaya। electrician experienced hai aur behaviour accha laga।",
-    "House wiring ke liye Pappu Electricals best option laga। quality cable use hui aur fitting bhi strong hai।",
-    "Shop ke lighting aur wiring ka kaam karwaya tha। kaam time par complete hua aur koi issue nahi aaya।",
-    "Pappu Electricals Ghatampur me trusted naam hai। fan, switch aur socket ka repair sahi se kiya।",
-    "Kanpur rural area me electrical goods aur repair ke liye achi jagah hai। kaam durable aur saaf tha।",
-    "Iron aur extension board ka issue yahan theek karwaya। service fast thi aur cost bhi zyada nahi thi।",
-    "Cooler wiring aur switch replacement ka kaam Pappu Electricals ne achha kiya। future me bhi yahin aaunga।"
-];
+/* ===== REVIEWS BY CATEGORY ===== */
+const REVIEWS = {
+  sales: [
+"Pappu Electricals se fan kharida, quality achhi hai aur rate reasonable laga.",
+"Ghatampur me electrical saman ke liye Pappu Electricals trusted shop hai.",
+"Switch aur socket ka achha collection yahin mil jata hai.",
+"LED bulb aur holder purchase kiya, product genuine nikla.",
+"House ke liye electrical items yahin se liye, sab sahi quality ke hain.",
+"Fan regulator aur switch board dono ek hi shop me mil gaye.",
+"Pappu Electricals me daily use electrical items easily available hain.",
+"Electrical saman ke rates market ke hisab se theek hain.",
+"Yahan se liye gaye switches smooth working ke hain.",
+"Fan aur light fitting ke liye pura saman mil gaya.",
 
-// shuffle function
-function shuffle(array) {
-    return array.sort(() => Math.random() - 0.5);
+"Pappu Electricals par branded electrical goods milte hain.",
+"Electrical items ki variety kaafi achhi lagi.",
+"Switch board ke accessories proper quality ke mile.",
+"Ghar ke liye LED lights ka achha option mila.",
+"Fan accessories reasonable price par available the.",
+"Electrical saman lene ke liye yeh ek achhi local shop hai.",
+"Wire roll aur plug top yahin se liya, quality sahi hai.",
+"Pappu Electricals me duplicate saman nahi milta.",
+"Electrical items ki packing bhi proper thi.",
+"Ghatampur area ke liye reliable electrical store hai.",
+
+"Fan ke different models available the.",
+"Switch aur socket ke multiple designs mil gaye.",
+"Electrical saman kharidne me koi confusion nahi hua.",
+"Pappu Electricals ka staff helpful hai.",
+"Electrical goods ka experience overall achha raha.",
+"House ke electrical items ek hi visit me mil gaye.",
+"Fan aur LED dono ka stock achha tha.",
+"Electrical shopping ke liye trusted place hai.",
+"Rates clear bataye gaye, koi hidden charge nahi.",
+"Electrical items quality ke hisab se priced hain.",
+
+"Ghar ke liye basic electrical saman yahin se kharida.",
+"Switches aur holders ki finishing achhi hai.",
+"Pappu Electricals par electrical goods reliable lage.",
+"Fan aur extension board dono mil gaye.",
+"Electrical saman lene ke liye convenient shop hai.",
+"Genuine products milne ka confidence hai.",
+"Electrical items ke liye bar-bar yahin aata hoon.",
+"Pappu Electricals ka overall experience positive raha.",
+"Electrical goods ke liye recommended shop hai.",
+"Local area me electrical saman ke liye best option hai."
+],
+
+  cooler: [
+"Pappu Electricals se cooler accessories liye, quality achhi hai.",
+"Cooler ke liye wiring saman easily mil gaya.",
+"Season ke time cooler ka saman yahin available tha.",
+"Cooler motor aur switch purchase kiya, sahi kaam kar raha hai.",
+"Cooler ke spare parts reasonable rate par mile.",
+"Pappu Electricals cooler items ke liye trusted shop hai.",
+"Cooler wiring ke liye proper quality ka saman mila.",
+"Cooler ke electrical parts yahin se liye.",
+"Seasonal demand ke time bhi stock available tha.",
+"Cooler accessories ka collection achha laga.",
+
+"Cooler pump aur wiring items yahin se purchase kiye.",
+"Cooler ke liye plug aur socket easily mil gaye.",
+"Pappu Electricals par cooler related saman genuine laga.",
+"Cooler electrical items ka rate sahi tha.",
+"Cooler ke spare parts ek hi jagah mil gaye.",
+"Season me cooler ke liye trusted local shop hai.",
+"Cooler ke wiring accessories achhi quality ke the.",
+"Pappu Electricals par cooler items ka experience achha raha.",
+"Cooler ke liye electrical saman sahi mila.",
+"Cooler accessories ke liye recommended shop hai.",
+
+"Cooler motor ke liye electrical items purchase kiye.",
+"Cooler ke liye switch aur wiring ka saman mil gaya.",
+"Cooler electrical goods ka stock proper tha.",
+"Seasonal items ke liye Pappu Electricals reliable hai.",
+"Cooler ke parts easily available ho jate hain.",
+"Pappu Electricals se liye gaye cooler items durable lage.",
+"Cooler ke liye extension aur wiring saman mil gaya.",
+"Cooler accessories ke rates reasonable the.",
+"Cooler items purchase karne ka experience smooth raha.",
+"Ghatampur me cooler saman ke liye achhi shop hai.",
+
+"Cooler ke electrical fittings achhi quality ke mile.",
+"Cooler motor accessories yahin se liye.",
+"Season ke hisab se cooler items available the.",
+"Pappu Electricals par cooler goods trusted lage.",
+"Cooler wiring ke liye sahi guidance bhi mili.",
+"Cooler ke liye proper electrical items milte hain.",
+"Cooler accessories ek hi visit me mil gaye.",
+"Pappu Electricals cooler saman ke liye best option laga.",
+"Cooler items ka overall experience achha raha.",
+"Local area me cooler saman ke liye reliable shop hai."
+]
+,
+  house: [
+"House wiring ke liye electrical saman yahin se liya.",
+"Ghar ke switch board ke items achhi quality ke mile.",
+"Home electrical ke liye Pappu Electricals trusted shop hai.",
+"Ghar ke liye LED aur fitting items purchase kiye.",
+"House renovation ke time electrical saman yahin se liya.",
+"Ghar ke electrical items reliable lage.",
+"Switch aur socket ke items proper quality ke the.",
+"House electrical saman ke liye achha experience raha.",
+"Ghar ke liye fan aur lights yahin se liye.",
+"Home electrical shopping ke liye best local option hai.",
+
+"Ghar ke wiring accessories ka stock achha tha.",
+"House ke electrical points ke liye saman mil gaya.",
+"Home electrical items ka rate reasonable laga.",
+"Pappu Electricals ghar ke electrical saman ke liye achha hai.",
+"House ke liye extension aur plug top yahin mile.",
+"Ghar ke electrical goods ek hi jagah mil gaye.",
+"Home electrical items ki quality satisfactory hai.",
+"House wiring accessories yahin se purchase kiye.",
+"Ghar ke liye switches ka achha collection hai.",
+"Home electrical ke liye recommended shop hai.",
+
+"House ke electrical items genuine lage.",
+"Ghar ke liye lighting accessories yahin se li.",
+"Home electrical saman ke liye convenient shop hai.",
+"House wiring ke items proper quality ke the.",
+"Ghar ke liye LED panel aur fittings mil gaye.",
+"Home electrical items ka experience smooth raha.",
+"Pappu Electricals ghar ke electrical ke liye reliable hai.",
+"House ke electrical goods ka stock achha laga.",
+"Ghar ke liye fan accessories easily mil gaye.",
+"Home electrical shopping simple rahi.",
+
+"Ghar ke electrical items purchase karna easy raha.",
+"House ke liye socket aur switch board yahin se liya.",
+"Home electrical goods ke rate theek lage.",
+"Pappu Electricals ghar ke electrical ke liye trusted hai.",
+"Ghar ke liye wiring saman achha mila.",
+"Home electrical items ki availability achhi hai.",
+"Ghar ke liye basic electrical items yahin se liye.",
+"Home electrical shopping ka experience achha raha.",
+"House ke electrical items ke liye best local shop.",
+"Ghar ke liye electrical saman lene ke liye sahi jagah hai."
+]
+,
+  shop: [
+"Shop lighting ke liye electrical saman yahin se liya.",
+"Commercial use ke liye electrical items reliable mile.",
+"Shop ke fan aur lights purchase kiye.",
+"Commercial wiring accessories easily mil gaye.",
+"Shop electrical items ka stock achha tha.",
+"Pappu Electricals shop electrical ke liye trusted hai.",
+"Commercial lighting ke liye saman mil gaya.",
+"Shop ke liye switches aur sockets yahin se liye.",
+"Commercial electrical goods ka rate sahi laga.",
+"Shop electrical ke liye achha experience raha.",
+
+"Shop renovation ke liye electrical saman yahin se liya.",
+"Commercial electrical items ki quality achhi hai.",
+"Shop ke electrical points ke liye saman mil gaya.",
+"Pappu Electricals par shop electrical items reliable lage.",
+"Commercial use ke liye fan accessories mil gaye.",
+"Shop ke liye LED lights ka achha option mila.",
+"Commercial wiring ke items yahin se liye.",
+"Shop electrical shopping ka experience smooth raha.",
+"Commercial electrical goods ka collection achha hai.",
+"Shop electrical ke liye recommended shop hai.",
+
+"Shop ke electrical items ek hi visit me mil gaye.",
+"Commercial electrical saman ke rates reasonable the.",
+"Shop lighting accessories yahin se purchase kiye.",
+"Commercial electrical goods ke liye trusted place hai.",
+"Shop ke liye fan aur lighting items mil gaye.",
+"Pappu Electricals commercial electrical ke liye achha hai.",
+"Shop ke electrical fittings proper quality ke the.",
+"Commercial electrical saman lene me asaani hui.",
+"Shop electrical items genuine lage.",
+"Commercial electrical shopping ka experience achha raha.",
+
+"Shop ke electrical goods yahin se liye.",
+"Commercial wiring accessories easily available the.",
+"Shop ke liye electrical items ka stock sufficient tha.",
+"Pappu Electricals shop electrical ke liye reliable hai.",
+"Commercial lighting ke liye electrical saman sahi mila.",
+"Shop ke electrical items ka rate fair tha.",
+"Commercial electrical goods ka experience satisfactory raha.",
+"Shop ke liye wiring items mil gaye.",
+"Commercial electrical ke liye best local option hai.",
+"Shop electrical items ke liye trusted shop hai."
+],
+
+  repair: [
+"Fan repair ka kaam sahi tarike se ho gaya.",
+"Cooler wiring issue ek hi visit me solve hua.",
+"Switch board repair ke baad kaam smooth hai.",
+"Electrical repair service fast aur safe lagi.",
+"Fan aur socket ka repair properly hua.",
+"Repair service ke liye Pappu Electricals trusted hai.",
+"Cooler ka electrical fault yahin theek ho gaya.",
+"Fan wiring repair ke baad issue nahi aaya.",
+"Switch repair ka kaam achha laga.",
+"Electrical repair reasonable rate me hua.",
+
+"Cooler repair ka experience achha raha.",
+"Fan ka electrical issue properly fix kiya gaya.",
+"Switch board repair ke baad quality achhi hai.",
+"Electrical repair ka kaam professional laga.",
+"Cooler wiring repair ek hi baar me ho gaya.",
+"Fan repair ke liye reliable shop hai.",
+"Electrical service timely mil gayi.",
+"Cooler electrical repair sahi tarike se hua.",
+"Fan ka repair kaam satisfactory raha.",
+"Electrical repair ka experience smooth raha.",
+
+"Switch aur socket repair ke baad kaam theek hai.",
+"Fan electrical repair quickly ho gaya.",
+"Cooler repair ke liye trusted local shop hai.",
+"Electrical repair ka rate reasonable laga.",
+"Fan repair ke baad performance better hui.",
+"Switch board repair ka kaam clean laga.",
+"Cooler electrical service achhi mili.",
+"Electrical repair ke liye recommended shop hai.",
+"Fan aur cooler repair ka experience achha raha.",
+"Electrical service reliable lagi.",
+
+"Cooler wiring repair ka kaam sahi hua.",
+"Fan repair ke liye Pappu Electricals achha hai.",
+"Electrical fault repair properly ho gaya.",
+"Switch repair ke baad koi issue nahi raha.",
+"Cooler repair ka kaam timely hua.",
+"Fan electrical issue fix kar diya gaya.",
+"Electrical service local area ke liye achhi hai.",
+"Repair ka kaam value for money laga.",
+"Cooler aur fan repair ka experience theek raha.",
+"Electrical repair ke liye trusted option hai."
+]
+
+};
+
+/* ===== STORAGE ===== */
+let used = JSON.parse(localStorage.getItem("usedReviews") || "{}");
+
+/* ===== HELPERS ===== */
+function shuffle(arr){
+  return arr.sort(()=>Math.random()-.5);
 }
 
-function loadReviews() {
-    const container = document.getElementById("reviews");
-    container.innerHTML = "";
-
-    const selected = shuffle([...ALL_REVIEWS]).slice(0, 5);
-
-    selected.forEach(text => {
-        const box = document.createElement("div");
-        box.className = "review-box";
-
-        box.innerHTML = `
-            <div class="review-text">${text}</div>
-            <button>Copy Review</button>
-        `;
-
-        box.querySelector("button").onclick = () => {
-            navigator.clipboard.writeText(text).then(() => {
-                window.location.href = GOOGLE_REVIEW_URL;
-            });
-        };
-
-        container.appendChild(box);
-    });
+/* ===== UI RENDER ===== */
+function showCategories(){
+  const app=document.getElementById("app");
+  app.innerHTML=`
+    <div class="categories">
+      <button class="cat-btn" onclick="showReviews('sales')">🛒 Electrical Items</button>
+      <button class="cat-btn" onclick="showReviews('cooler')">❄️ Cooler / Seasonal</button>
+      <button class="cat-btn" onclick="showReviews('house')">🏠 House Electrical</button>
+      <button class="cat-btn" onclick="showReviews('shop')">🏪 Shop / Commercial</button>
+      <button class="cat-btn" onclick="showReviews('repair')">🔧 Repair / Service</button>
+    </div>
+  `;
 }
 
-loadReviews();
+function showReviews(category){
+  if(!used[category]) used[category]=[];
+
+  const remaining = REVIEWS[category].filter(
+    r => !used[category].includes(r)
+  );
+
+  const app=document.getElementById("app");
+  app.innerHTML=`<button class="back" onclick="showCategories()">← Change Category</button>`;
+
+  shuffle(remaining).slice(0,7).forEach(text=>{
+    const div=document.createElement("div");
+    div.className="review";
+    div.innerHTML=`
+      <p>${text}</p>
+      <button>Copy Review</button>
+    `;
+    div.querySelector("button").onclick=()=>{
+      navigator.clipboard.writeText(text).then(()=>{
+        used[category].push(text);
+        localStorage.setItem("usedReviews",JSON.stringify(used));
+        window.location.href=GOOGLE_URL;
+      });
+    };
+    app.appendChild(div);
+  });
+}
+
+/* ===== START ===== */
+showCategories();
 </script>
 
 </body>
-
 </html>
