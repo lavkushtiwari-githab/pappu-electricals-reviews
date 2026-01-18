@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <title>Pappu Electricals Ghatampur – Google Reviews</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Copy Hinglish Google reviews for Pappu Electricals Ghatampur Kanpur">
 
 <style>
 body{
@@ -21,29 +22,10 @@ header h1{margin:0;font-size:20px}
 header p{margin:6px 0 0;color:#666;font-size:14px}
 
 main{
-  max-width:900px;
+  max-width:820px;
   margin:auto;
   padding:16px;
 }
-
-.categories{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-  gap:12px;
-  margin-top:20px;
-}
-
-.cat-btn{
-  background:#0b57d0;
-  color:#fff;
-  border:none;
-  padding:16px;
-  border-radius:12px;
-  font-size:15px;
-  cursor:pointer;
-}
-.cat-btn:active{transform:scale(.97)}
-
 .review{
   background:#fff;
   border-radius:12px;
@@ -54,30 +36,22 @@ main{
 .review p{
   margin:0;
   font-size:15px;
-  line-height:1.6;
+  line-height:1.65;
 }
-.review button{
+button{
   margin-top:12px;
   background:#0b57d0;
   color:#fff;
   border:none;
   padding:10px 16px;
   border-radius:8px;
+  font-size:14px;
   cursor:pointer;
 }
-
-.back{
-  margin-bottom:16px;
-  background:#ddd;
-  border:none;
-  padding:8px 12px;
-  border-radius:6px;
-  cursor:pointer;
-}
-
+button:active{transform:scale(.97)}
 footer{
   text-align:center;
-  padding:20px;
+  padding:18px;
   font-size:13px;
   color:#666;
 }
@@ -88,284 +62,291 @@ footer{
 
 <header>
   <h1>Pappu Electricals – Review Copy Page</h1>
-  <p>Pehle category select kare, phir review copy kare</p>
+  <p>Copy kare → Google Reviews page open hoga</p>
 </header>
 
-<main id="app"></main>
+<main id="reviews"></main>
 
 <footer>© 2026 Pappu Electricals, Ghatampur Kanpur</footer>
 
 <script>
 const GOOGLE_URL =
-"https://www.google.com/search?sxsrf=ANbL-n4qTUjJCLqz7g-0_5AMABWqIagupw:1768488830220&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOZWOYD7M86pKCHf37bqnJ3m75qFH1l_r4AwoeDzbcE6hQP5NJha1ih8AjQikrvg2ahp_Fpzb1RKpLL5K5IhzIA04F7VwdVV04Qw5Iwctdx4DhLgQAg%3D%3D&q=Pappu+Electricals+Reviews&aic=0#lrd=0x399c55ff57f5674d:0x283b50e014162864,3,,,,";
+"https://www.google.com/search?q=pappu+electricals+ghatampur+reviews&sourceid=chrome-mobile&ie=UTF-8#lkt=LocalPoiReviews";
 
-/* ===== REVIEWS BY CATEGORY ===== */
-const REVIEWS = {
-  sales: [
-"Pappu Electricals se fan kharida, quality achhi hai aur rate reasonable laga.",
-"Ghatampur me electrical saman ke liye Pappu Electricals trusted shop hai.",
-"Switch aur socket ka achha collection yahin mil jata hai.",
-"LED bulb aur holder purchase kiya, product genuine nikla.",
-"House ke liye electrical items yahin se liye, sab sahi quality ke hain.",
-"Fan regulator aur switch board dono ek hi shop me mil gaye.",
-"Pappu Electricals me daily use electrical items easily available hain.",
-"Electrical saman ke rates market ke hisab se theek hain.",
-"Yahan se liye gaye switches smooth working ke hain.",
-"Fan aur light fitting ke liye pura saman mil gaya.",
+/* ===== 200 HINGLISH REVIEWS POOL ===== */
+const REVIEWS = [
+"Pappu Electricals se fan wiring karwai thi, kaam bilkul proper hua aur koi issue nahi aaya.",
+"Ghar ke switch aur socket ka kaam Pappu Electricals ne ache se complete kiya.",
+"Cooler wiring ka problem tha jo ek hi visit me solve ho gaya.",
+"Mixer aur iron ka electrical issue yahan theek karwaya, service fast thi.",
+"House wiring ke liye Pappu Electricals reliable option hai.",
+"Shop ke lighting work ke liye contact kiya, kaam clean aur safe laga.",
+"Fan installation aur wiring check proper kiya gaya.",
+"Extension board repair karwai thi, ab bilkul theek chal raha hai.",
+"Cooler aur motor connection ka kaam sahi rate me hua.",
+"Switch board replacement ache quality ke parts se kiya gaya.",
+"Pappu Electricals Ghatampur me trusted electrician hai.",
+"Electric fitting ka kaam time par complete kiya gaya.",
+"Wiring cables good quality ki use hui.",
+"Fan aur cooler dono ka issue solve kar diya.",
+"Shop wiring ke liye best experience raha.",
+"Home electrical repair ke liye achi service hai.",
+"Rates reasonable lage aur kaam bhi durable tha.",
+"Switch aur socket fitting sahi tarike se hui.",
+"Cooler wiring ke baad performance better ho gayi.",
+"Electrical ka kaam proper finishing ke saath hua."
+"Market rate se kaafi sasta saman mila. Discount bahut hi shandar hai yahan.",
+"Pappu Electricals par hamesha wholesale rate me saman milta hai. Huge discount!",
+"Maine kaafi jagah rate check kiye, par yahan sabse jyada discount mila. Best prices.",
+"Bulk order par itna discount mila ki mera thousands ka fayda ho gaya. High savings.",
+"Sasta bhi aur accha bhi! Yahan discount hamesha milta rehta hai. Paisa vasool shop.",
+"Paisa bachana hai toh seedhe Pappu Electricals aaiye, yahan har cheez par discount hai.",
+"Branded saman par bhi itna accha discount milna mushkil hai. Great deals.",
+"Bargaining karne ki zarurat hi nahi padti, ye khud hi bahut accha discount de dete hain.",
+"Naye ghar ki fitting ke liye yahan se best discount aur kahin nahi milega. Low rates.",
+"Kam keemat me asli aur branded saman ki guarantee. Very reasonable pricing.",
+"Pappu Electricals par discount ka matlab hai real savings. Value for money.",
+"Consumer items par bhi kaafi badiya price cut mil jata hai. Pocket friendly.",
+"Maine yahan se fans aur lights khareedi, bahut hi affordable rates lage.",
+"Bina kisi offer ke bhi yahan ke rates kaafi saste hain. Competitive prices.",
+"Ghatampur me sabse sasta aur accha electrical saman yahin milta hai. Best shop.",
+"Har kharidari par kuch na kuch saving pakki hai. Always a discount here.",
+"Top brands par bhi ye bahut generous discount dete hain. Happy with pricing.",
+"Students aur aam logo ke liye bahut hi budget-friendly shop hai. Very economical.",
+"Inka daam fixed aur bahut kam hota hai, jo har kisi ke budget me fit baithta hai.",
+"Discount ke mamle me Kanpur ki kisi bhi badi shop ko takkar dete hain.",
+"Itne kam daam me company ka original saman, believe karna mushkil hai.",
+"Customer ki pocket ka pura khayal rakhte hain, bahut hi badiya rate hain.",
+"Paisa vasool shopping karni hai toh Pappu Electricals zarur jayein.",
+"Yahan ka discount hi customers ko baar-baar kheench lata hai. Best bargain.",
+"Affordable shopping ke liye number one jagah hai ye. Sabse sasta electrical.",
+"Bhaiya ne meri problem bahut dhyan se suni aur ekdum genuine solution diya. Faltu kharcha nahi karwaya.",
+"Electrical wiring ko lekar kaafi confusion tha, par yahan sahi rasta dikhaya gaya. Very helpful advice.",
+"Pappu Electricals par aapko kaam ki bahut acchi samajh rakhne wale log milenge. Knowledgeable team.",
+"Meri motor baar-baar jal rahi thi, inke suggestion se ab wo ekdum sahi chal rahi hai. Problem solved!",
+"Faltu me expensive products nahi bechte, jo zarurat ho wahi batate hain. Very honest shop.",
+"Electrical fault sudharne ke liye yahan se badiya mashwara aur kahin nahi milega. True experts.",
+"Owner ka nazariya bahut professional hai, wo pehle problem samajhte hain phir saman dete hain.",
+"Purane fan ki repairing ho ya naya ghar banana ho, inki advice hamesha kaam aati hai.",
+"Agar aap confused hain ki kya khareedein, toh ek baar yahan zarur aayein. Genuine guide.",
+"Engineering level ki samajh hai yahan ke staff ko, har electrical problem ka solution hai inke paas.",
+"Yahan saman bechne ki jaldi nahi hoti, customer ki problem solve karne par zor rehta hai.",
+"Honesty aur sahi information ke liye main hamesha Pappu Electricals ko hi choose karta hoon.",
+"Market me sab apni pocket bharne me lage hain, par yahan mujhe sabse sahi aur sasti advice mili.",
+"Wiring load ki ekdum accurate calculation karke di, jisse mera kafi paisa bach gaya.",
+"Bahut hi kabil log hain, har electrical issue ka tod hai inke paas. Highly recommended.",
+"Yahan ke owner bahut experienced hain, unki di hui jankari se main bahut satisfied hoon.",
+"Sahi product aur sahi fitting ki advice ke liye best jagah hai ye.",
+"Electrical kaam me safety sabse important hai aur yahan isi baat ka dhyan rakha jata hai.",
+"Kabhi bhi galat saman nahi dete, hamesha customer ke fayde ki baat sochte hain.",
+"Meri shop ki light baar-baar trip ho rahi thi, inke bataye tarike se ab sab theek hai.",
+"Har chote-bade electrical issue ka yahan behtareen aur sasta solution mil jata hai.",
+"Customer ki baat ko dhairya se sunna inki sabse badi quality hai. Great listening.",
+"Galat wiring ki wajah se bill jyada aa raha tha, inki advice se ab bill kam aata hai. Thanks!",
+"Technical gyan ke mamle me inka koi muqabla nahi hai. Superb knowledge.",
+"Reliable advice aur pakka solution, bas yahi hai Pappu Electricals ki pehchan.",
+"Staff ka behaviour bahut hi polite hai. Yahan aakar bahut accha feel hota hai.",
+"Pappu Electricals ke log bahut hi humble aur helpful hain. Great team work.",
+"Bheed hone ke baad bhi staff ne bahut shanti se baat ki. Very professional service.",
+"Yahan ke workers ka baat karne ka tarika bahut hi respectful hai. Full marks for manners.",
+"Har saman ko bade pyar aur patience se dikhate hain, koi frustration nahi. Very patient.",
+"Customer ki izzat karna koi inse seekhe. Bahut hi badiya staff hai.",
+"Shop par jaate hi staff jis tarah se welcome karta hai, dil khush ho jata hai. Good hospitality.",
+"Chote se chota saman lene par bhi staff pura time deta hai. Equal treatment for everyone.",
+"Bahut hi friendly log hain, vyavhar aisa ki customer baar-baar aana chahe.",
+"Acchi quality ke sath-sath yahan ka behavior bhi number one hai. Best service.",
+"Staff bahut fast aur polite hai, kaam turant ho jata hai. No time waste.",
+"Pappu Electricals ki team bahut hi professional aur humble hai. Respectful staff.",
+"Yahan ke owner aur staff dono hi bahut simple aur acche nature ke hain.",
+"Kisi bhi cheez ke baare me pucho, staff bahut shanti se jawab deta hai. Very helpful.",
+"Itni badi shop hone ke baad bhi staff me bilkul ghamand nahi hai. Grounded people.",
+"Customer service ke mamle me ye shop Ghatampur me sabse best hai. Well mannered.",
+"Staff ko apne kaam ki puri jankari hai aur nature bhi bahut sweet hai. Professional team.",
+"Saman pasand na aaye tab bhi staff ka attitude bahut positive rehta hai. No pressure selling.",
+"Pure city me aisa polite staff maine kahin aur nahi dekha. Best customer care.",
+"Shopping experience yahan bahut pleasant rehta hai, staff bahut cooperate karta hai.",
+"Hansmukh staff aur behtareen service, Pappu Electricals ki yahi khubi hai.",
+"Bade respect ke sath customer ko deal karte hain, bahut hi disciplined team.",
+"Staff ki help se mujhe sahi brand choose karne me bahut asani hui. Very cooperative.",
+"Acche behavior ki wajah se hi main yahan baar-baar aata hoon. Trustworthy people.",
+"Respectful behavior aur quick service, bahut hi badiya experience raha.",
+"problem ka solution hai inke paas.",
+"Market rate se kaafi sasta saman mila. Discount bahut hi shandar hai yahan.",
+"Pappu Electricals par hamesha wholesale rate me saman milta hai. Huge discount!",
+"Maine kaafi jagah rate check kiye, par yahan sabse jyada discount mila. Best prices.",
+"Bulk order par itna discount mila ki mera thousands ka fayda ho gaya. High savings.",
+"Sasta bhi aur accha bhi! Yahan discount hamesha milta rehta hai. Paisa vasool shop.",
+"Paisa bachana hai toh seedhe Pappu Electricals aaiye, yahan har cheez par discount hai.",
+"Branded saman par bhi itna accha discount milna mushkil hai. Great deals.",
+"Bargaining karne ki zarurat hi nahi padti, ye khud hi bahut accha discount de dete hain.",
+"Naye ghar ki fitting ke liye yahan se best discount aur kahin nahi milega. Low rates.",
+"Kam keemat me asli aur branded saman ki guarantee. Very reasonable pricing.",
+"Pappu Electricals par discount ka matlab hai real savings. Value for money.",
+"Consumer items par bhi kaafi badiya price cut mil jata hai. Pocket friendly.",
+"Maine yahan se fans aur lights khareedi, bahut hi affordable rates lage.",
+"Bina kisi offer ke bhi yahan ke rates kaafi saste hain. Competitive prices.",
+"Ghatampur me sabse sasta aur accha electrical saman yahin milta hai. Best shop.",
+"Har kharidari par kuch na kuch saving pakki hai. Always a discount here.",
+"Top brands par bhi ye bahut generous discount dete hain. Happy with pricing.",
+"Students aur aam logo ke liye bahut hi budget-friendly shop hai. Very economical.",
+"Inka daam fixed aur bahut kam hota hai, jo har kisi ke budget me fit baithta hai.",
+"Discount ke mamle me Kanpur ki kisi bhi badi shop ko takkar dete hain.",
+"Itne kam daam me company ka original saman, believe karna mushkil hai.",
+"Customer ki pocket ka pura khayal rakhte hain, bahut hi badiya rate hain.",
+"Paisa vasool shopping karni hai toh Pappu Electricals zarur jayein.",
+"Yahan ka discount hi customers ko baar-baar kheench lata hai. Best bargain.",
+"Affordable shopping ke liye number one jagah hai ye. Sabse sasta electrical.",
+"Diwali offer me maine kaafi paise bachaye. Yahan offers chalte hi rehte hain.",
+"Cashback scheme bahut transparent aur profitable hai. Mujhe turant benefit mila.",
+"Festivals ke time yahan se shopping karna bahut munafa ka sauda hai. Great deals.",
+"Online shopping jaisa cashback ab apni local shop Pappu Electricals par. Amazing!",
+"Combo offers me saman lena yahan bahut sasta padta hai. Buy more save more.",
+"Har month kuch naye offers aate hain, jisse customers ka bahut fayda hota hai.",
+"Cashback ke sath shopping karne ka maza hi kuch aur hai. Extra savings.",
+"Pappu Electricals par offers ki bharmaar rehti hai, must visit for deals.",
+"Inke offers sach me genuine hote hain, koi hidden terms nahi. No fake ads.",
+"Gifts aur cashback ke sath shopping karne ke liye best shop. Highly exciting.",
+"Inverter aur battery par mujhe bahut hi kamal ka cashback mila. Best deal ever.",
+"Schemes aisi ki aap shopping kiye bina reh nahi payenge. Very attractive offers.",
+"Cashback process bahut simple aur easy hai, koi jhanjhat nahi. Instant benefit.",
+"Seasonal sale me yahan bahut hi dhasu offers milte hain. Don't miss out.",
+"Pappu Electricals ki deals hamesha dhamakedar hoti hain. Full on savings.",
+"Lucky draw aur cashback jaise rewards yahan aksar milte hain. Fun shopping.",
+"Bina sale ke bhi yahan koi na koi offer chalta hi rehta hai. Good management.",
+"Exchange offers bhi bahut acche hain, purane ke badle naye par extra off.",
+"Smart customers ke liye yahan hamesha behtareen offers maujood hain.",
+"Cashback offers ki wajah se yahan saman kharidna online se bhi sasta hai.",
+"Itne saare offers shayad hi kisi aur electrical shop par milein. Best variety.",
+"Customers ke liye behtareen rewards aur cashback facility. Very happy.",
+"Yahan ki cashback policy bahut honest aur transparent hai.",
+"Festive season me yahan offers ka mela laga rehta hai. Must go!",
+"Shandar offers aur cashback ke liye Pappu Electricals best choice hai.",
+"Pappu Electricals par sirf asli branded saman hi milta hai. 100% Original products.",
+"Havells, Anchor aur Bajaj jaise bade brands ka pura stock available hai.",
+"Duplicate ka yahan koi kaam nahi, sirf pakka aur company ka maal milta hai.",
+"Quality se koi compromise nahi karte, hamesha top brands hi rakhte hain. Pure Trust.",
+"Ghar ki safety ke liye main hamesha yahan se branded wire aur switch leta hoon.",
+"Branded saman ki jitni variety yahan hai, utni Kanpur me kahin nahi milegi.",
+"Har product par company ki seal aur brand ka bharosa milta hai. High quality.",
+"Bade brands ke latest model yahan sabse pehle aate hain. Trendy stock.",
+"Branded products ki lambi range, har kisi ki choice ka saman mil jata hai.",
+"Yahan se liya hua har saman saalo-saal chalta hai kyunki sab branded hota hai.",
+"Original company ka saman chahiye toh seedhe Pappu Electricals jayein.",
+"Brands ke mamle me yahan koi compromise nahi hota. Only premium stuff.",
+"Saste local saman ke bajaye yahan hamesha quality brands hi milte hain.",
+"Company ke authorized dealer hone ki wajah se saman par pura bharosa rehta hai.",
+"Branded electronics ke liye sabse reliable shop hai Ghatampur me.",
+"Har bade brand ke authentic products ka collection milta hai. Safe shopping.",
+"Yahan se saman lekar kabhi regret nahi hota, kyunki sab branded hai.",
+"Branded fans, motors aur geysers ki sabse badi range yahin hai.",
+"Quality pasand logo ke liye Pappu Electricals ek perfect place hai.",
+"Sirf premium brands me deal karte hain, bahut hi badiya collection.",
+"Market me milne wale duplicate items se bachna hai toh yahan aaiye. Genuine.",
+"Branded saman wo bhi kam daam me, sirf yahin possible hai. Great brand store.",
+"Product ki build quality aur finish dekhte hi pata chalta hai ki asli brand hai.",
+"Sabhi namami companies ke electrical products ka vishal sangrah. Fully stocked.",
+"Brand ka bharosa aur Pappu Electricals ka naam, dono hi best hain.",
+"Pakka bill aur asli warranty ki guarantee. Tension-free shopping experience.",
+"Warranty claim karne me Pappu Electricals pura support karte hain. Very helpful.",
+"Saman kharab hone par company warranty ka pura fayda mila. Staff assisted well.",
+"Bina bill ke koi saman nahi dete, jisse warranty me koi problem nahi aati.",
+"Warranty card par ba-kaayda stamp aur date lagakar dete hain. Proper process.",
+"Unhone warranty process itni easy kar di hai ki koi pareshani nahi hui.",
+"Pura bharosa hai ki yahan se liya saman agar kharab hua toh warranty milegi.",
+"Bhaiya ne warranty ke rules bahut hi saaf-saaf samjhaye. Very transparent.",
+"Service bahut fast hai, warranty me mera product turant replace ho gaya.",
+"Warranty ke mamle me Pappu Electricals bahut hi honest shopkeeper hain.",
+"Original company warranty ke sath kharidari karne ka sukoon hi alag hai.",
+"Warranty support ke liye yahan ka staff hamesha ready rehta hai.",
+"Koi bahanebaazi nahi, warranty ka matlab yahan pura support hai. Reliable.",
+"Pappu Electricals se saman lekar aap warranty ki chinta bhul sakte hain.",
+"Itne saalo se yahan se saman le raha hoon, warranty me kabhi issue nahi aaya.",
+"Product registration aur warranty activation me staff puri help karta hai.",
+"Pakka GST bill milta hai, jisse warranty claim karna easy ho jata hai.",
+"Yahan se liya gaya har costly item warranty se secure rehta hai. Safe buy.",
+"Company ki warranty ke sath full mental satisfaction milta hai. Highly trusted.",
+"After sales service bahut badiya hai, warranty ka pura dhyan rakhte hain.",
+"Reliable warranty aur shandar customer support. 5-star service!",
+"Kisi bhi technical kharabi par warranty ki puri madad mili. Friendly service.",
+"Warranty card sambhal kar rakhne ki advice bhi dete hain, which is very good.",
+"Companies ke sath direct touch me hain, isliye warranty jaldi mil jati hai.",
+"Bina kisi headache ke warranty claim facility available hai yahan.",
+"Saman ki itni variety hai ki aap dekhte-dekhte thak jayenge. Endless options.",
+"Saste se lekar expensive tak, yahan har budget ke liye options maujood hain.",
+"Decorative lights aur modern switches ke itne designs maine kahin nahi dekhe.",
+"Ek hi chhat ke niche bijli ka sara saman, kahin aur jane ki zarurat hi nahi.",
+"Electrical fitting me itne options hain ki confuse ho jayein ki kaun sa lein.",
+"Har brand ke kayi models yahan stock me rehte hain. Huge inventory.",
+"Pappu Electricals par aapko har variety ke fans aur coolers mil jayenge.",
+"Ghar ki decoration ke liye lights ke bahut unique options hain yahan.",
+"Chahe chota fuse ho ya bada stabilizer, yahan sab milta hai. One stop shop.",
+"Variety ke mamle me ye shop pure Ghatampur me number one hai.",
+"New age smart electrical products ke bhi kaafi saare options hain yahan.",
+"Color, design aur size—har cheez me aapko dhero choices milengi.",
+"Apni choice aur budget ke hisab se aap kuch bhi choose kar sakte hain.",
+"Industrial ho ya domestic, har tarah ke electrical saman ki range available hai.",
+"Inka stock hamesha updated rehta hai, latest designs aate rehte hain.",
+"Chunne ki puri freedom, staff har option ko detail me dikhata hai.",
+"Electrical appliances ka bahut bada showroom aur massive collection.",
+"Har item me 10 tarah ke choices, customer ke liye bahut accha hai.",
+"Yahan aakar aapko apni pasand ka saman zarur mil jayega. Guaranteed.",
+"Modern aur classic dono tarah ke electrical accessories mil jayengi.",
+"Jitni badi shop, utne hi jyada options. Truly amazing variety.",
+"Budget-friendly options bhi bahut saare hain yahan for everyone.",
+"Electrical wiring ke liye wire ke kayi brands aur sizes available hain.",
+"Aapki zarurat jo bhi ho, inke paas uske kayi solutions hain.",
+"Variety aur stock ki koi kami nahi hai Pappu Electricals par. Must visit.",
+"Bina kisi doubt ke, ye best electrical shop in Kanpur hai. Top service.",
+"Agar aap Ghatampur me hain, toh ye best electrical shop in Kanpur area hai.",
+"Sasta daam aur badiya quality, yahi ise best electrical shop in Kanpur banata hai.",
+"Pure city me sabse reliable naam, definitely the best electrical shop in Kanpur.",
+"Main Kanpur city se yahan saman lene aata hoon kyunki ye best electrical shop in Kanpur hai.",
+"Quality aur service me number 1, truly the best electrical shop in Kanpur.",
+"Sabhi brands aur best rates ke liye ye best electrical shop in Kanpur hai.",
+"Honesty aur customer satisfaction ki wajah se ye best electrical shop in Kanpur hai.",
+"Kanpur ke har ghar ki pehli pasand, best electrical shop in Kanpur—Pappu Electricals.",
+"Agar aap bijli ka saman search kar rahe hain, toh ye best electrical shop in Kanpur hai.",
+"Great experience! Ye shop best electrical shop in Kanpur hone ke layak hai.",
+"Pappu Electricals jaisa koi nahi, simply the best electrical shop in Kanpur.",
+"Ghatampur ki pride aur best electrical shop in Kanpur region.",
+"Electrical world ka king, definitely the best electrical shop in Kanpur.",
+"Reasonable rate par branded saman ke liye best electrical shop in Kanpur.",
+"Har mamle me perfect shop, best electrical shop in Kanpur in my opinion.",
+"Kanpur ke sabse trustworthy shopkeeper, best electrical shop in Kanpur.",
+"Meri nazar me toh yahi best electrical shop in Kanpur hai. 5 Stars!",
+"Electrical saman ki A to Z zaruraton ke liye best electrical shop in Kanpur.",
+"Satisfied customers aur shandar stock, the best electrical shop in Kanpur.",
+"Agar best chahiye, toh best electrical shop in Kanpur par hi jayein.",
+"Is shop ne apni service se prove kiya hai ki ye best electrical shop in Kanpur hai.",
+"Economical aur original saman ke liye best electrical shop in Kanpur.",
+"Sabka bharosa, best electrical shop in Kanpur—Pappu Electricals.",
+"Kanpur region ki sabse shandar aur best electrical shop in Kanpur.",
 
-"Pappu Electricals par branded electrical goods milte hain.",
-"Electrical items ki variety kaafi achhi lagi.",
-"Switch board ke accessories proper quality ke mile.",
-"Ghar ke liye LED lights ka achha option mila.",
-"Fan accessories reasonable price par available the.",
-"Electrical saman lene ke liye yeh ek achhi local shop hai.",
-"Wire roll aur plug top yahin se liya, quality sahi hai.",
-"Pappu Electricals me duplicate saman nahi milta.",
-"Electrical items ki packing bhi proper thi.",
-"Ghatampur area ke liye reliable electrical store hai.",
 
-"Fan ke different models available the.",
-"Switch aur socket ke multiple designs mil gaye.",
-"Electrical saman kharidne me koi confusion nahi hua.",
-"Pappu Electricals ka staff helpful hai.",
-"Electrical goods ka experience overall achha raha.",
-"House ke electrical items ek hi visit me mil gaye.",
-"Fan aur LED dono ka stock achha tha.",
-"Electrical shopping ke liye trusted place hai.",
-"Rates clear bataye gaye, koi hidden charge nahi.",
-"Electrical items quality ke hisab se priced hain.",
-
-"Ghar ke liye basic electrical saman yahin se kharida.",
-"Switches aur holders ki finishing achhi hai.",
-"Pappu Electricals par electrical goods reliable lage.",
-"Fan aur extension board dono mil gaye.",
-"Electrical saman lene ke liye convenient shop hai.",
-"Genuine products milne ka confidence hai.",
-"Electrical items ke liye bar-bar yahin aata hoon.",
-"Pappu Electricals ka overall experience positive raha.",
-"Electrical goods ke liye recommended shop hai.",
-"Local area me electrical saman ke liye best option hai."
-],
-
-  cooler: [
-"Pappu Electricals se cooler accessories liye, quality achhi hai.",
-"Cooler ke liye wiring saman easily mil gaya.",
-"Season ke time cooler ka saman yahin available tha.",
-"Cooler motor aur switch purchase kiya, sahi kaam kar raha hai.",
-"Cooler ke spare parts reasonable rate par mile.",
-"Pappu Electricals cooler items ke liye trusted shop hai.",
-"Cooler wiring ke liye proper quality ka saman mila.",
-"Cooler ke electrical parts yahin se liye.",
-"Seasonal demand ke time bhi stock available tha.",
-"Cooler accessories ka collection achha laga.",
-
-"Cooler pump aur wiring items yahin se purchase kiye.",
-"Cooler ke liye plug aur socket easily mil gaye.",
-"Pappu Electricals par cooler related saman genuine laga.",
-"Cooler electrical items ka rate sahi tha.",
-"Cooler ke spare parts ek hi jagah mil gaye.",
-"Season me cooler ke liye trusted local shop hai.",
-"Cooler ke wiring accessories achhi quality ke the.",
-"Pappu Electricals par cooler items ka experience achha raha.",
-"Cooler ke liye electrical saman sahi mila.",
-"Cooler accessories ke liye recommended shop hai.",
-
-"Cooler motor ke liye electrical items purchase kiye.",
-"Cooler ke liye switch aur wiring ka saman mil gaya.",
-"Cooler electrical goods ka stock proper tha.",
-"Seasonal items ke liye Pappu Electricals reliable hai.",
-"Cooler ke parts easily available ho jate hain.",
-"Pappu Electricals se liye gaye cooler items durable lage.",
-"Cooler ke liye extension aur wiring saman mil gaya.",
-"Cooler accessories ke rates reasonable the.",
-"Cooler items purchase karne ka experience smooth raha.",
-"Ghatampur me cooler saman ke liye achhi shop hai.",
-
-"Cooler ke electrical fittings achhi quality ke mile.",
-"Cooler motor accessories yahin se liye.",
-"Season ke hisab se cooler items available the.",
-"Pappu Electricals par cooler goods trusted lage.",
-"Cooler wiring ke liye sahi guidance bhi mili.",
-"Cooler ke liye proper electrical items milte hain.",
-"Cooler accessories ek hi visit me mil gaye.",
-"Pappu Electricals cooler saman ke liye best option laga.",
-"Cooler items ka overall experience achha raha.",
-"Local area me cooler saman ke liye reliable shop hai."
-]
-,
-  house: [
-"House wiring ke liye electrical saman yahin se liya.",
-"Ghar ke switch board ke items achhi quality ke mile.",
-"Home electrical ke liye Pappu Electricals trusted shop hai.",
-"Ghar ke liye LED aur fitting items purchase kiye.",
-"House renovation ke time electrical saman yahin se liya.",
-"Ghar ke electrical items reliable lage.",
-"Switch aur socket ke items proper quality ke the.",
-"House electrical saman ke liye achha experience raha.",
-"Ghar ke liye fan aur lights yahin se liye.",
-"Home electrical shopping ke liye best local option hai.",
-
-"Ghar ke wiring accessories ka stock achha tha.",
-"House ke electrical points ke liye saman mil gaya.",
-"Home electrical items ka rate reasonable laga.",
-"Pappu Electricals ghar ke electrical saman ke liye achha hai.",
-"House ke liye extension aur plug top yahin mile.",
-"Ghar ke electrical goods ek hi jagah mil gaye.",
-"Home electrical items ki quality satisfactory hai.",
-"House wiring accessories yahin se purchase kiye.",
-"Ghar ke liye switches ka achha collection hai.",
-"Home electrical ke liye recommended shop hai.",
-
-"House ke electrical items genuine lage.",
-"Ghar ke liye lighting accessories yahin se li.",
-"Home electrical saman ke liye convenient shop hai.",
-"House wiring ke items proper quality ke the.",
-"Ghar ke liye LED panel aur fittings mil gaye.",
-"Home electrical items ka experience smooth raha.",
-"Pappu Electricals ghar ke electrical ke liye reliable hai.",
-"House ke electrical goods ka stock achha laga.",
-"Ghar ke liye fan accessories easily mil gaye.",
-"Home electrical shopping simple rahi.",
-
-"Ghar ke electrical items purchase karna easy raha.",
-"House ke liye socket aur switch board yahin se liya.",
-"Home electrical goods ke rate theek lage.",
-"Pappu Electricals ghar ke electrical ke liye trusted hai.",
-"Ghar ke liye wiring saman achha mila.",
-"Home electrical items ki availability achhi hai.",
-"Ghar ke liye basic electrical items yahin se liye.",
-"Home electrical shopping ka experience achha raha.",
-"House ke electrical items ke liye best local shop.",
-"Ghar ke liye electrical saman lene ke liye sahi jagah hai."
-]
-,
-  shop: [
-"Shop lighting ke liye electrical saman yahin se liya.",
-"Commercial use ke liye electrical items reliable mile.",
-"Shop ke fan aur lights purchase kiye.",
-"Commercial wiring accessories easily mil gaye.",
-"Shop electrical items ka stock achha tha.",
-"Pappu Electricals shop electrical ke liye trusted hai.",
-"Commercial lighting ke liye saman mil gaya.",
-"Shop ke liye switches aur sockets yahin se liye.",
-"Commercial electrical goods ka rate sahi laga.",
-"Shop electrical ke liye achha experience raha.",
-
-"Shop renovation ke liye electrical saman yahin se liya.",
-"Commercial electrical items ki quality achhi hai.",
-"Shop ke electrical points ke liye saman mil gaya.",
-"Pappu Electricals par shop electrical items reliable lage.",
-"Commercial use ke liye fan accessories mil gaye.",
-"Shop ke liye LED lights ka achha option mila.",
-"Commercial wiring ke items yahin se liye.",
-"Shop electrical shopping ka experience smooth raha.",
-"Commercial electrical goods ka collection achha hai.",
-"Shop electrical ke liye recommended shop hai.",
-
-"Shop ke electrical items ek hi visit me mil gaye.",
-"Commercial electrical saman ke rates reasonable the.",
-"Shop lighting accessories yahin se purchase kiye.",
-"Commercial electrical goods ke liye trusted place hai.",
-"Shop ke liye fan aur lighting items mil gaye.",
-"Pappu Electricals commercial electrical ke liye achha hai.",
-"Shop ke electrical fittings proper quality ke the.",
-"Commercial electrical saman lene me asaani hui.",
-"Shop electrical items genuine lage.",
-"Commercial electrical shopping ka experience achha raha.",
-
-"Shop ke electrical goods yahin se liye.",
-"Commercial wiring accessories easily available the.",
-"Shop ke liye electrical items ka stock sufficient tha.",
-"Pappu Electricals shop electrical ke liye reliable hai.",
-"Commercial lighting ke liye electrical saman sahi mila.",
-"Shop ke electrical items ka rate fair tha.",
-"Commercial electrical goods ka experience satisfactory raha.",
-"Shop ke liye wiring items mil gaye.",
-"Commercial electrical ke liye best local option hai.",
-"Shop electrical items ke liye trusted shop hai."
-],
-
-  repair: [
-"Fan repair ka kaam sahi tarike se ho gaya.",
-"Cooler wiring issue ek hi visit me solve hua.",
-"Switch board repair ke baad kaam smooth hai.",
-"Electrical repair service fast aur safe lagi.",
-"Fan aur socket ka repair properly hua.",
-"Repair service ke liye Pappu Electricals trusted hai.",
-"Cooler ka electrical fault yahin theek ho gaya.",
-"Fan wiring repair ke baad issue nahi aaya.",
-"Switch repair ka kaam achha laga.",
-"Electrical repair reasonable rate me hua.",
-
-"Cooler repair ka experience achha raha.",
-"Fan ka electrical issue properly fix kiya gaya.",
-"Switch board repair ke baad quality achhi hai.",
-"Electrical repair ka kaam professional laga.",
-"Cooler wiring repair ek hi baar me ho gaya.",
-"Fan repair ke liye reliable shop hai.",
-"Electrical service timely mil gayi.",
-"Cooler electrical repair sahi tarike se hua.",
-"Fan ka repair kaam satisfactory raha.",
-"Electrical repair ka experience smooth raha.",
-
-"Switch aur socket repair ke baad kaam theek hai.",
-"Fan electrical repair quickly ho gaya.",
-"Cooler repair ke liye trusted local shop hai.",
-"Electrical repair ka rate reasonable laga.",
-"Fan repair ke baad performance better hui.",
-"Switch board repair ka kaam clean laga.",
-"Cooler electrical service achhi mili.",
-"Electrical repair ke liye recommended shop hai.",
-"Fan aur cooler repair ka experience achha raha.",
-"Electrical service reliable lagi.",
-
-"Cooler wiring repair ka kaam sahi hua.",
-"Fan repair ke liye Pappu Electricals achha hai.",
-"Electrical fault repair properly ho gaya.",
-"Switch repair ke baad koi issue nahi raha.",
-"Cooler repair ka kaam timely hua.",
-"Fan electrical issue fix kar diya gaya.",
-"Electrical service local area ke liye achhi hai.",
-"Repair ka kaam value for money laga.",
-"Cooler aur fan repair ka experience theek raha.",
-"Electrical repair ke liye trusted option hai."
-]
-
-};
+/* 🔴 ADD MORE REVIEWS HERE (up to 200) */
+];
 
 /* ===== STORAGE ===== */
-let used = JSON.parse(localStorage.getItem("usedReviews") || "{}");
+let used = JSON.parse(localStorage.getItem("usedReviews") || "[]");
 
 /* ===== HELPERS ===== */
 function shuffle(arr){
   return arr.sort(()=>Math.random()-.5);
 }
 
-/* ===== UI RENDER ===== */
-function showCategories(){
-  const app=document.getElementById("app");
-  app.innerHTML=`
-    <div class="categories">
-      <button class="cat-btn" onclick="showReviews('sales')">🛒 Electrical Items</button>
-      <button class="cat-btn" onclick="showReviews('cooler')">❄️ Cooler / Seasonal</button>
-      <button class="cat-btn" onclick="showReviews('house')">🏠 House Electrical</button>
-      <button class="cat-btn" onclick="showReviews('shop')">🏪 Shop / Commercial</button>
-      <button class="cat-btn" onclick="showReviews('repair')">🔧 Repair / Service</button>
-    </div>
-  `;
-}
+/* ===== LOAD REVIEWS ===== */
+function load(){
+  const container=document.getElementById("reviews");
+  container.innerHTML="";
 
-function showReviews(category){
-  if(!used[category]) used[category]=[];
+  const remaining = REVIEWS.filter(r=>!used.includes(r));
 
-  const remaining = REVIEWS[category].filter(
-    r => !used[category].includes(r)
-  );
+  if(remaining.length===0){
+    container.innerHTML="<p>All reviews have been used ✅</p>";
+    return;
+  }
 
-  const app=document.getElementById("app");
-  app.innerHTML=`<button class="back" onclick="showCategories()">← Change Category</button>`;
-
-  shuffle(remaining).slice(0,7).forEach(text=>{
+  shuffle(remaining).slice(0,5).forEach(text=>{
     const div=document.createElement("div");
     div.className="review";
     div.innerHTML=`
@@ -374,17 +355,16 @@ function showReviews(category){
     `;
     div.querySelector("button").onclick=()=>{
       navigator.clipboard.writeText(text).then(()=>{
-        used[category].push(text);
+        used.push(text);
         localStorage.setItem("usedReviews",JSON.stringify(used));
         window.location.href=GOOGLE_URL;
       });
     };
-    app.appendChild(div);
+    container.appendChild(div);
   });
 }
 
-/* ===== START ===== */
-showCategories();
+load();
 </script>
 
 </body>
